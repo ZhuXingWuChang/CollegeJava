@@ -16,6 +16,9 @@ public class error {
 		String firstName = in.next();
 		System.out.println("Your mother firstname is: " + firstName + ".");
 
+		System.out.println("How old are you?");
+		int old = in.nextInt();
+		System.out.println("Your old is: " + old);
 	}
 
 }
