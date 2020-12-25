@@ -5,10 +5,13 @@ import java.util.Scanner;
 
 public class Game {
     private Room currentRoom;
+    //String是key,而Handler是value
     private HashMap<String, Handler> handlers = new HashMap<String, Handler>();
 
     public Game() {
-//        handlers.put("go", new HandlerGo());
+        handlers.put("go", new HandlerGo(this));
+        handlers.put("bye", new HandlerBye(this));
+        handlers.put("help", new HandlerHelp(this));
         createRooms();//create:创造
     }
 
@@ -49,12 +52,7 @@ public class Game {
 
     //以下为用户命令
 
-    private void printHelp() {
-        System.out.print("迷路了吗？你可以作的命令有： go bye help");
-        System.out.println("如：\tgo east");
-    }
-
-    private void goRoom(String direction) {
+    public void goRoom(String direction) {
         Room nextRoom = currentRoom.getExit(direction);
 
         if (nextRoom == null) {
@@ -80,8 +78,13 @@ public class Game {
             //如果遇到regex(这里是空格),那么将字符串分割为多个字符串
             String[] words = line.split(" ");
             Handler handler = handlers.get(words[0]);
+            //words[1]不一定存在,为了防止下标越界,用value
+            String value = "";
+            if (words.length > 1) {
+                value = words[1];
+            }
             if (handler != null) {
-                handler.doCmd(words[1]);
+                handler.doCmd(value);//如果words的长度只有1,那么value(null)传过去
                 if (handler.isBye()) {
                     break;
                 }
