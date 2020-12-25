@@ -1,9 +1,5 @@
 package zjuwengkai;
 
-/**
- * @auther 诸行无常
- * @date 2020/12/25 - 17:04
- */
 public class Room {
     public String description;
     public Room northExit;

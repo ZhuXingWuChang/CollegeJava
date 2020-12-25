@@ -2,10 +2,6 @@ package zjuwengkai;
 
 import java.util.Scanner;
 
-/**
- * @auther 诸行无常
- * @date 2020/12/25 - 16:44
- */
 public class Game {
     private Room currentRoom;
 
@@ -79,7 +75,7 @@ public class Game {
             nextRoom = currentRoom.westExit;
         }
 
-        if (nextRoom != null) {
+        if (nextRoom == null) {
             System.out.println("那里没有门！");
         } else {
             currentRoom = nextRoom;
