@@ -24,7 +24,6 @@ Field只管数据的存放
 public class CellMachine {
 
     public static void main(String[] args) {
-
         //准备数据,我们有数据了
 
         //field(场、区域),这里构造一个30×30的区域

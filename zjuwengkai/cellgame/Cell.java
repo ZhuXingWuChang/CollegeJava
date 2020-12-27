@@ -23,6 +23,7 @@ public class Cell {
     }
 
     //画的时候
+
     public void draw(Graphics g, int x, int y, int size) {
         g.drawRect(x, y, size, size);//先画个方框
         if (alive) {//如果是活着的

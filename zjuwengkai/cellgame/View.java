@@ -20,6 +20,7 @@ public class View extends JPanel {
     //每当我的“窗口”要被显示出来的时候，调用paint方法
     @Override
     public void paint(Graphics g) {
+
         super.paint(g);
         //去遍历每一个格子，如果这个格子里面是有细胞的，那么画出来
         //而cell的数据由cell自己管理，view只需要知道，如果这里不是空的，那么画就行了
@@ -32,6 +33,7 @@ public class View extends JPanel {
                 }
             }
         }
+
     }
-    
+
 }

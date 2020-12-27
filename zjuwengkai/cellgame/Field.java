@@ -40,7 +40,8 @@ public class Field {
     }
 
     //获得周围的邻居的情况(是否活着)
-    public Cell[] getNeighbour(int row, int col) {//获得参数是当前所在的行和列
+    //获得参数是当前所在的行和列
+    public Cell[] getNeighbour(int row, int col) {
         ArrayList<Cell> list = new ArrayList<Cell>();
         //对所在的整个九宫格进行遍历
         for (int i = -1; i < 2; i++) {
