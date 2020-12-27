@@ -34,8 +34,8 @@ public class Field {
         return ret;
     }
 
-    //get:得到
-    public Cell get(int row, int col) {
+    //getCell:得到
+    public Cell getCell(int row, int col) {
         return field[row][col];
     }
 
@@ -49,13 +49,14 @@ public class Field {
                 int c = col + j;//c是九宫格所对应的三个列标
                 //只要r和c在合理的范围之内，并且不是Cell自身，那么就把field[][]给add到list里面去
                 if (r > -1 && r < height && c > -1 && c < width && !(r == row && c == col)) {
-                    list.add(field[r][c]);
+                    list.add(field[r][c]);//field[][]就是一个Cell
                 }
             }
         }
         //toArray会把list集合里面的所有东西转换成数组
         //只需要在转换的时候将需要的类型当成参数传入，java工具即可给我们返回我们想要的类型
-        //所以这里实际上是返回了一个Cell[]
+        //所以这里实际上是将ArrayList<Cell>转换成了一个Cell[]，并且返回
         return list.toArray(new Cell[list.size()]);
     }
+
 }

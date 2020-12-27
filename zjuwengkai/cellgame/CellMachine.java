@@ -38,7 +38,7 @@ public class CellMachine {
         //遍历field，让每个cell得到filed的行和列，并且让1/5的cell重生
         for (int row = 0; row < field.getHeight(); row++) {
             for (int col = 0; col < field.getWidth(); col++) {
-                Cell cell = field.get(row, col);//让每个cell得到自己所在的位置
+                Cell cell = field.getCell(row, col);//从field中get一个Cell
                 if (Math.random() < 0.2) {//有1/5的细胞会
                     cell.reborn();//reborn(再生)
                 }
@@ -62,7 +62,7 @@ public class CellMachine {
             //遍历field
             for (int row = 0; row < field.getHeight(); row++) {
                 for (int col = 0; col < field.getWidth(); col++) {
-                    Cell cell = field.get(row, col);//让每个cell都得到行和列
+                    Cell cell = field.getCell(row, col);//从field中get一个Cell
                     Cell[] neighbour = field.getNeighbour(row, col);//neighbour:邻居
                     int numOflive = 0;
                     for (Cell c : neighbour) {//遍历所有的邻居
@@ -95,6 +95,6 @@ public class CellMachine {
                 e.printStackTrace();
             }
         }
-
     }
+
 }

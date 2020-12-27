@@ -29,4 +29,5 @@ public class Cell {
             g.fillRect(x, y, size, size);//那么方框需要填起来
         }
     }
+
 }
