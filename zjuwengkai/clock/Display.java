@@ -1,4 +1,4 @@
-package clock;
+package zjuwengkai.clock;
 
 public class Display {
 	private int value = 0;//value：值

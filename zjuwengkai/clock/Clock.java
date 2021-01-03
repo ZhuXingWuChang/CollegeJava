@@ -1,4 +1,4 @@
-package clock;
+package zjuwengkai.clock;
 
 public class Clock {
 	Display minute = new Display(60);
