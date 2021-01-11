@@ -34,6 +34,7 @@ class Employee4 {
     static {
         var generator = new Random();
         // set nextId to a random number between 0 and 9999
+        // Random类的nextInt方法返回一个 0 ~ (参数-1) 之间的随机值
         nextId = generator.nextInt(10000);
     }
 
