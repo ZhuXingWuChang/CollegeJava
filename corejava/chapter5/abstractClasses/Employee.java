@@ -2,6 +2,9 @@ package corejava.chapter5.abstractClasses;
 
 import java.time.*;
 
+/**
+ * Java核心技术5-6.
+ */
 public class Employee extends Person {
     private double salary;
     private LocalDate hireDay;

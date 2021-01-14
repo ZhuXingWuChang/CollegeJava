@@ -1,5 +1,8 @@
 package corejava.chapter5.abstractClasses;
 
+/**
+ * Java核心技术5-7.
+ */
 public class Student extends Person {
     private String major;
 
