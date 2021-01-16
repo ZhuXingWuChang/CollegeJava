@@ -14,35 +14,33 @@ public class DateAndTimestamp {
         var date = new Date(0, 0, 0, 0, 0, 0);
         var timestamp = new Timestamp(0, 0, 0, 0, 0, 0, 0);
 
-        // display
+        System.out.println("display");
         System.out.println("date: " + date);
         System.out.println("timestamp: " + timestamp);
         System.out.println();
 
-        // symmetry ?
+        System.out.println("symmetry ?");
         System.out.println("date.equals(timestamp) return: " + date.equals(timestamp));
         System.out.println("timestamp.equals(date) return: " + timestamp.equals(date));
         System.out.println();
 
-        // Use solution one
         System.out.println("Use solution one:");
         var timestamp1 = new MyTimestamp1(0, 0, 0, 0, 0, 0, 0);
         System.out.println("date.equals(timestamp1) return:" + date.equals(timestamp1));
         System.out.println("timestamp1.equals(date) return: " + timestamp1.equals(date));
         System.out.println();
 
-        // Use solution two
         System.out.println("Use solution two:");
         var timestamp2 = new MyTimestamp2(0, 0, 0, 0, 0, 0, 0);
         System.out.println("date.equals(timestamp2) return: " + date.equals(timestamp2));
         System.out.println("timestamp2.equals(date) return: " + timestamp2.equals(date));
         System.out.println();
 
+        System.out.println("transitivity ?");
         var ts = new Timestamp(date.getTime());
         ts.setNanos(ts.getNanos() + 1);
         System.out.println("date.equals(ts) return: " + date.equals(ts));
         System.out.println("timestamp2.equals(ts) return: " + timestamp2.equals(ts));
-
         System.out.println("date: " + date.getTime());
         System.out.println("timestamp2:" + timestamp2.getTime());
         System.out.println("ts: " + ts.getTime());
