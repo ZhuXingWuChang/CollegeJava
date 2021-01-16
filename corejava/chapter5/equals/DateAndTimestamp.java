@@ -14,18 +14,12 @@ public class DateAndTimestamp {
         var date = new Date(0, 0, 0, 0, 0, 0);
         var timestamp = new Timestamp(0, 0, 0, 0, 0, 0, 0);
 
+        // display
         System.out.println("date: " + date);
         System.out.println("timestamp: " + timestamp);
         System.out.println();
 
-        /*
-        自反性。对应任何非null的引用值x，x.equals(x) 必须返回true。
-        对称性。对于任何非null的引用值x和y，当且仅当y.equals(x) 返回true时，x.equals(y) 必须返回true。
-        传递性。对于任何非null的引用值x、y和z，如果x.equals(y) 必须返回true，且y.equals(z) 返回true，那么x.equals(z) 也必须返回true。
-        一致性。对于任何非null的引用值x和y，只要equals比较用到的信息没被改，多次x.equals(y)一致地返回true，或一致返回false。
-        对于任何非null的引用值x，x.equals(null)必须返回fasle
-         */
-
+        // symmetry ?
         System.out.println("date.equals(timestamp) return: " + date.equals(timestamp));
         System.out.println("timestamp.equals(date) return: " + timestamp.equals(date));
         System.out.println();
