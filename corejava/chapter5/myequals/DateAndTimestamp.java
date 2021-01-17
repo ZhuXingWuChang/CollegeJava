@@ -1,4 +1,4 @@
-package corejava.chapter5.equals;
+package corejava.chapter5.myequals;
 
 import java.util.Date;
 import java.sql.Timestamp;
