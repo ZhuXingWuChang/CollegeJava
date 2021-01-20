@@ -21,6 +21,7 @@ public class VarargsTest
         double test1 = max(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         System.out.println(test1);
         
+        // 显式声明数组
         double test2 = max(new double[]{-3.2, 20.4, 77.9, 1024.0});
         System.out.println(test2);
     }
