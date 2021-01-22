@@ -26,7 +26,7 @@ public class DateAndTimestamp {
 
         System.out.println("Use solution one:");
         var timestamp1 = new MyTimestamp1(0, 0, 0, 0, 0, 0, 0);
-        System.out.println("date.equals(timestamp1) return:" + date.equals(timestamp1));
+        System.out.println("date.equals(timestamp1) return: " + date.equals(timestamp1));
         System.out.println("timestamp1.equals(date) return: " + timestamp1.equals(date));
         System.out.println();
 
@@ -42,7 +42,7 @@ public class DateAndTimestamp {
         System.out.println("date.equals(ts) return: " + date.equals(ts));
         System.out.println("timestamp2.equals(ts) return: " + timestamp2.equals(ts));
         System.out.println("date: " + date.getTime());
-        System.out.println("timestamp2:" + timestamp2.getTime());
+        System.out.println("timestamp2: " + timestamp2.getTime());
         System.out.println("ts: " + ts.getTime());
     }
 }
