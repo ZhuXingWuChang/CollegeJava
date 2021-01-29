@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 public class ObjectAnalyzer
 {
+    // visit:展示；如果某个对象已经调用过了toString方法，那么将该对象添加到visit列表里
     private ArrayList<Object> visited = new ArrayList<>();
     
     /**
@@ -23,7 +24,7 @@ public class ObjectAnalyzer
         // 空引用则返回字符串"null"
         if (obj == null) return "null";
         // ArrayList的Contains方法，如果此列表中包含指定的元素，则返回true
-        // 所以这里如果List里包含obj，那么返回字符串"..."
+        // 所以这里如果List里包含obj，即已经展示过的某个对象，那么返回字符串"..."
         if (visited.contains(obj)) return "...";
         // 到这里，obj既不是空，也不是列表里包含的Element(元素)，所以把obj添加到列表里
         visited.add(obj);
@@ -49,7 +50,7 @@ public class ObjectAnalyzer
                 Object val = Array.get(obj, i);
                 // 判断数组组件（数组组成成分）的类型是否是原始类型（基本类型或者其对应的包装类型），如果是则接在字符串r后
                 if (cl.getComponentType().isPrimitive()) r += val;
-                    // 否则将递归调用自己？？？？？
+                    // 否则，说明数组的组件还是数组（数组是多维数组），那么在该数组组件上递归调用toString，直到降到一维数组为止
                 else r += toString(val);
             }
             // 至此为止，每个元素已经遍历完成，并且它们的信息都被添加到了字符串r当中，然后我们返回这个字符串
@@ -57,9 +58,10 @@ public class ObjectAnalyzer
         }
         
         /*
-        以上是针对数组的情况，因为数组本身也是一个对象，下面分析不是数组的情况
+        以上是在非null、非String的前提下，数组的情况，因为数组本身也是一个对象，下面分析不是数组的情况
          */
         
+        // 到这里，cl不是null，不是String，不是数组，那么只可能是对象
         String r = cl.getName();
         // inspect the fields of this class and all superclasses(检查这个类和所有超类的字段)
         do
@@ -72,25 +74,25 @@ public class ObjectAnalyzer
             // get the names and values of all fields(获取所有字段的名称和值)
             for (Field f : fields)
             {
-                // 如果不是静态字段
+                // 如果不是类字段，那么就是实例字段
                 if (!Modifier.isStatic(f.getModifiers()))
                 {
                     // String的endsWith方法测试该字符串是否以指定的后缀结束
-                    // 如果字符串没有以[结尾，那么
                     if (!r.endsWith("[")) r += ",";
                     // 获取字段名，并且接上一个=
                     r += f.getName() + "=";
                     // 获取字段的类型
                     Class t = f.getType();
-                    // Field类的get方法，返回obj对象中用这个Field对象描述的字段的值
+                    // Field类的get方法，返回显式参数中用这个Field对象描述的字段的值
                     Object val = f.get(obj);
                     if (t.isPrimitive()) r += val;
                     else r += toString(val);
                 }
             }
             r += "]";
+            // 获取超类类型
             cl = cl.getSuperclass();
-        }
+        } // 如果超类不为空，那么接着访问超类的实例字段
         while (cl != null);
         
         return r;
