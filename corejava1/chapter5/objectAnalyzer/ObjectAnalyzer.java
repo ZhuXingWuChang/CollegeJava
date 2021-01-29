@@ -6,6 +6,9 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 
+/**
+ * Java核心技术5-16.
+ */
 public class ObjectAnalyzer
 {
     // visit:展示；如果某个对象已经调用过了toString方法，那么将该对象添加到visit列表里
@@ -48,9 +51,9 @@ public class ObjectAnalyzer
                 if (i > 0) r += ",";
                 // 返回obj对象中第i个组件的值
                 Object val = Array.get(obj, i);
-                // 判断数组组件（数组组成成分）的类型是否是原始类型（基本类型或者其对应的包装类型），如果是则接在字符串r后
+                // 判断数组元素的类型是否是基本类型（或者其对应的包装类型），如果是则接在字符串r后
                 if (cl.getComponentType().isPrimitive()) r += val;
-                    // 否则，说明数组的组件还是数组（数组是多维数组），那么在该数组组件上递归调用toString，直到降到一维数组为止
+                    // 否则，说明数组的元素还是数组（数组是多维数组），那么在该数组组件上递归调用toString，直到降到一维数组为止
                 else r += toString(val);
             }
             // 至此为止，每个元素已经遍历完成，并且它们的信息都被添加到了字符串r当中，然后我们返回这个字符串
@@ -58,7 +61,7 @@ public class ObjectAnalyzer
         }
         
         /*
-        以上是在非null、非String的前提下，数组的情况，因为数组本身也是一个对象，下面分析不是数组的情况
+        以上是在非null、非String的前提下、非数组的情况，因为数组本身也是一个对象，下面分析不是数组的情况
          */
         
         // 到这里，cl不是null，不是String，不是数组，那么只可能是对象
