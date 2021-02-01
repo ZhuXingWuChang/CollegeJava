@@ -3,6 +3,9 @@ package corejava1.chapter6.clone;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+/**
+ * Java核心技术6-5.
+ */
 public class Employee implements Cloneable
 {
     private String name;
