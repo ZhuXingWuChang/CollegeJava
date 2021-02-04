@@ -11,14 +11,19 @@ public class Employee
     private int age;
     private double salary;
     
-    @Override
-    public String toString()
+    public Employee(int age)
     {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", salary=" + salary +
-                '}';
+        this.age = age;
+    }
+    
+    public Employee(String name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+    
+    public Employee()
+    {
     }
     
     public String getName()
@@ -56,5 +61,15 @@ public class Employee
         this.name = name;
         this.age = age;
         this.salary = salary;
+    }
+    
+    @Override
+    public String toString()
+    {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                '}';
     }
 }
