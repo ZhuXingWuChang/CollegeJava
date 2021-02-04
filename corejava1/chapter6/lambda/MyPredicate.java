@@ -5,6 +5,7 @@ package corejava1.chapter6.lambda;
  *
  * @author ZhuXingWuChang.
  */
+@FunctionalInterface
 public interface MyPredicate<T>
 {
     public boolean test(T t);
