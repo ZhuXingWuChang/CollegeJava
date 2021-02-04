@@ -1,8 +1,13 @@
 package corejava1.chapter6.lambda;
 
-import java.util.Comparator;
+import java.util.*;
 import java.util.function.Consumer;
 
+/**
+ * This is my program, it's doesn't come from book. It's come from 尚硅谷.
+ *
+ * @author ZhuXingWuChang
+ */
 public class TestLambda2
 {
     public void test1()
@@ -48,6 +53,32 @@ public class TestLambda2
         System.out.println(com);
     }
     
+    // Java语法糖
+    public void test5()
+    {
+        String[] strs = {"aaa", "bbb", "ccc"};
+        List<String> list = new ArrayList<>();
+        show(new HashMap<>());
+    }
+    
+    public void show(Map<String, Integer> map)
+    {
+    
+    }
+    
+    public void test6()
+    {
+        Integer num = operation(100, x -> x * x);
+        System.out.println(num);
+        
+        System.out.println(operation(200, y -> y + 200));
+    }
+    
+    public Integer operation(Integer num, MyFun mf)
+    {
+        return mf.getValue(num);
+    }
+    
     public static void main(String[] args)
     {
         TestLambda2 test = new TestLambda2();
@@ -55,5 +86,7 @@ public class TestLambda2
         test.test2();
         test.test3();
         test.test4();
+        
+        test.test6();
     }
 }
