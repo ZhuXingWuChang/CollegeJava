@@ -4,6 +4,11 @@ import java.io.PrintStream;
 import java.util.Comparator;
 import java.util.function.*;
 
+/**
+ * This is my program, it's doesn't come from book. It's come from 尚硅谷.
+ *
+ * @author ZhuXingWuChang
+ */
 public class TestMethodRef
 {
     // 对象::实例方法名
@@ -28,8 +33,6 @@ public class TestMethodRef
         Supplier<Integer> sup2 = emp::getAge;
         Integer num = sup2.get();
         System.out.println(num);
-        
-        
     }
     
     // 类::静态方法名
