@@ -2,8 +2,25 @@ package designPatterns.simpleFactoryPattern1.good;
 
 public class CreditcardPay extends AbstractPay
 {
-    public void pay()
+    private double moneyInTheCreditcard;
+    
+    public CreditcardPay(double balance)
     {
-        //信用卡支付处理代码
+        moneyInTheCreditcard = balance;
+    }
+    
+    @Override
+    public void pay(double price)
+    {
+        if (price < moneyInTheCreditcard)
+            moneyInTheCreditcard -= price;
+        else
+            System.out.println("金额异常，购买失败");
+    }
+    
+    @Override
+    public double getBalance()
+    {
+        return moneyInTheCreditcard;
     }
 }
