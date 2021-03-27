@@ -14,6 +14,11 @@ public class TVFactory
             System.out.println("电视机工厂生产海信电视机!");
             return new HisenseTV();
         }
+        else if (brand.equalsIgnoreCase("TCL"))
+        {
+            System.out.println("电视机工厂生产TCL电视机!");
+            return new TCLTV();
+        }
         else
         {
             throw new Exception("对不起，暂不能生产该品牌电视机!");
