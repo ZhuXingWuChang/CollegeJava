@@ -6,5 +6,8 @@ public class MainClass
     {
         TV television1 = TVFactory.produceTV("Haier");
         TV television2 = TVFactory.produceTV("Hisense");
+        
+        television1.play();
+        television2.play();
     }
 }
