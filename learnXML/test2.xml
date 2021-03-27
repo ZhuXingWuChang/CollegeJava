@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<student>
-    <xx><![CDATA[10<5]]></xx>
-</student>
+<!DOCTYPE students SYSTEM "test2.dtd">
+<students>
+    <student>
+        <name>Alice</name>
+        <age>20</age>
+    </student>
+    <student>
+        <name>Bob</name>
+        <age>20</age>
+    </student>
+    <student>
+        <name>Cindy</name>
+        <age>20</age>
+    </student>
+</students>
