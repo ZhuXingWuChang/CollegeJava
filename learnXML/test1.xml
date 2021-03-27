@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    定义一个xml文件,描述自己的家庭
+    家庭中有父亲,母亲,自己
+    每个人都有姓名,年龄和职业
+-->
+<family>
+    <member nickname="father">
+        <name>Tom</name>
+        <age>45</age>
+        <work>manager</work>
+    </member>
+    <member nickname="mother">
+        <name>Alice</name>
+        <age>45</age>
+        <work>artist</work>
+    </member>
+    <member nickname="I">
+        <name>ZhuXingWuChang</name>
+        <age>20</age>
+        <work>student</work>
+    </member>
+</family>
