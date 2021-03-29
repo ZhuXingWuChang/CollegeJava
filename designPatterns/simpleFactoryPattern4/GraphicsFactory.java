@@ -2,7 +2,7 @@ package designPatterns.simpleFactoryPattern4;
 
 public class GraphicsFactory
 {
-    public static Graphics newGraphics(String type)
+    public static Graphics newGraphics(String type) throws UnSupportedShapeException
     {
         if (type.equalsIgnoreCase("circle"))
             return new Circle();
@@ -11,6 +11,6 @@ public class GraphicsFactory
         else if (type.equalsIgnoreCase("triangle"))
             return new Triangle();
         else
-            throw new UnSupportedShapeException;
+            throw new UnSupportedShapeException();
     }
 }
