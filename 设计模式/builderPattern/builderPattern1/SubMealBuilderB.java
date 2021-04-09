@@ -1,4 +1,4 @@
-package 设计模式.builderPattern;
+package 设计模式.builderPattern.builderPattern1;
 
 public class SubMealBuilderB extends MealBuilder
 {
