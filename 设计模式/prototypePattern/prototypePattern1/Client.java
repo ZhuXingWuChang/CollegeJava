@@ -15,5 +15,11 @@ public class Client
         
         System.out.println("email.getAttachment==copyEmail.getAttachment?");
         System.out.println(email.getAttachment() == copyEmail.getAttachment());
+        
+        System.out.println("email.getEmailTitle==copyEmail.getEmailTitle?");
+        System.out.println(email.getEmailTitle() == copyEmail.getEmailTitle());
+        
+        System.out.println("email.getEmailLevel()==copyEmail.getEmailLevel()?");
+        System.out.println(email.getEmailLevel() == copyEmail.getEmailLevel());
     }
 }

@@ -3,10 +3,14 @@ package 设计模式.prototypePattern.prototypePattern1;
 public class Email implements Cloneable
 {
     private Attachment attachment = null;
+    private String emailTitle;
+    private int emailLevel;
     
     public Email()
     {
         this.attachment = new Attachment();
+        this.emailTitle = "Hello";
+        this.emailLevel = 1;
     }
     
     @Override
@@ -27,6 +31,16 @@ public class Email implements Cloneable
     public Attachment getAttachment()
     {
         return this.attachment;
+    }
+    
+    public String getEmailTitle()
+    {
+        return emailTitle;
+    }
+    
+    public int getEmailLevel()
+    {
+        return emailLevel;
     }
     
     public void display()

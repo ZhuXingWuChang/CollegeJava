@@ -9,7 +9,7 @@ public class Client
         MyColor obj1 = (MyColor) pm.getColor("red");
         obj1.display();
         
-        MyColor obj2 = (MyColor) pm.getColor("blue");
+        MyColor obj2 = (MyColor) pm.getColor("red");
         obj2.display();
         
         System.out.println(obj1 == obj2);
