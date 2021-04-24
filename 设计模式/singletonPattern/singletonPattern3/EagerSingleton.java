@@ -1,4 +1,4 @@
-package 设计模式.SingletonPattern.SingletonPattern3;
+package 设计模式.singletonPattern.singletonPattern3;
 
 public class EagerSingleton
 {

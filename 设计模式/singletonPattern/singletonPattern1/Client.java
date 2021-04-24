@@ -1,4 +1,4 @@
-package 设计模式.SingletonPattern.SingletonPattern1;
+package 设计模式.singletonPattern.singletonPattern1;
 
 public class Client
 {

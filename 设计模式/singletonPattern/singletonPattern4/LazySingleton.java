@@ -1,4 +1,4 @@
-package 设计模式.SingletonPattern.SingletonPattern4;
+package 设计模式.singletonPattern.singletonPattern4;
 
 public class LazySingleton
 {

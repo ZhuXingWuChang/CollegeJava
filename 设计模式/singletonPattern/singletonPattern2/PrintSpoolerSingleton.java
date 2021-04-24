@@ -1,4 +1,4 @@
-package 设计模式.SingletonPattern.SingletonPattern2;
+package 设计模式.singletonPattern.singletonPattern2;
 
 public class PrintSpoolerSingleton
 {
