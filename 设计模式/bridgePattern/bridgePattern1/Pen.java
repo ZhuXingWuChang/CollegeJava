@@ -1,4 +1,4 @@
-package 设计模式.bridgePattern;
+package 设计模式.bridgePattern.bridgePattern1;
 
 public abstract class Pen
 {
