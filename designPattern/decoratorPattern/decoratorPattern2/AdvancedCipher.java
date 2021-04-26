@@ -12,7 +12,7 @@ public class AdvancedCipher extends CipherDecorator
     {
         String result = super.encrypt(plainText);
         result = mod(result);
-        return super.encrypt(plainText);
+        return result;
     }
     
     public String mod(String text)
