@@ -1,4 +1,4 @@
-package designPattern.chainOfResponsibility.chainOfResponsibility1;
+package designPattern.chainOfResponsibilityPattern.chainOfResponsibilityPattern1;
 
 public class Director extends Leader {
     public Director(String name) {

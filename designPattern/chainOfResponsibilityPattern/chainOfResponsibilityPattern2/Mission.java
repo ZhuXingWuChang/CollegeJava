@@ -1,4 +1,4 @@
-package designPattern.chainOfResponsibility.chainOfResponsibility2;
+package designPattern.chainOfResponsibilityPattern.chainOfResponsibilityPattern2;
 
 public class Mission {
     private String sendName;

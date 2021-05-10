@@ -1,4 +1,4 @@
-package designPattern.chainOfResponsibility.chainOfResponsibility1;
+package designPattern.chainOfResponsibilityPattern.chainOfResponsibilityPattern1;
 
 public class GeneralManager extends Leader {
     public GeneralManager(String name) {

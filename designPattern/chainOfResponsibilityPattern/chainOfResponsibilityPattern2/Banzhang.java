@@ -1,14 +1,14 @@
-package designPattern.chainOfResponsibility.chainOfResponsibility2;
+package designPattern.chainOfResponsibilityPattern.chainOfResponsibilityPattern2;
 
-public class Paizhang extends Officer{
-    public Paizhang(String name) {
+public class Banzhang extends Officer{
+    public Banzhang(String name) {
         super(name);
     }
 
     @Override
     public void disposeMission(Mission mission) {
-        if(mission.getEnemyNum()<50){
-            System.out.println("排长下达作战命令!");
+        if(mission.getEnemyNum()<10){
+            System.out.println("班长下达作战命令!");
         }
         else
         {

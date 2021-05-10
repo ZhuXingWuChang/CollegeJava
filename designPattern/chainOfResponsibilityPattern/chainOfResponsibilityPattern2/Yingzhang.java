@@ -1,4 +1,4 @@
-package designPattern.chainOfResponsibility.chainOfResponsibility2;
+package designPattern.chainOfResponsibilityPattern.chainOfResponsibilityPattern2;
 
 public class Yingzhang extends Officer{
     public Yingzhang(String name) {
